@@ -1,0 +1,4 @@
+include:
+  - project: 'OTUG-DevOps/ot-auto-devops'
+    ref: main
+    file: 'Auto-DevOps.gitlab-ci.yml'

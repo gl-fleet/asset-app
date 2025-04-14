@@ -1,0 +1,147 @@
+html,
+body,
+#root {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* * {
+    animation-duration: 0.25s !important;
+} */
+
+marquee {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.inctive-link {
+    cursor: not-allowed;
+}
+
+.row-link {
+    cursor: pointer;
+}
+
+.vlink:hover {
+    color: #1668dc !important;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #1668dc !important;
+}
+
+.link:hover>span {
+    color: #1668dc !important;
+}
+
+.bg-block {
+    padding: 38px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.ant-table-cell {
+    padding: 10px !important;
+}
+
+/* Notification */
+
+.ant-notification-notice-wrapper {
+    width: auto !important;
+    margin-bottom: 0px !important;
+}
+
+.ant-notification-notice {
+    width: auto !important;
+    padding: 8px 16px !important;
+}
+
+.ant-notification-notice-icon {
+    top: 2px;
+}
+
+.ant-notification-notice-message {
+    margin-inline-start: 22px !important;
+    font-size: 14px !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap;
+}
+
+.ant-notification-notice-close {
+    top: 8px !important;
+    inset-inline-end: 8px !important;
+}
+
+/* Popover -> Person */
+
+#popover-person {
+    margin: 0px;
+    padding: 0px;
+}
+
+#popover-person .ant-card {
+    border: none !important;
+}
+
+#popover-person .ant-card-body {
+    padding: 16px 12px;
+}
+
+#popover-person .ant-card-actions li {
+    margin: 4px 0;
+}
+
+#popover-person .ant-card-meta-avatar {
+    padding-inline-end: 10px !important;
+}
+
+/* Popover -> Asset */
+
+#popover-asset {
+    margin: 0px;
+    padding: 0px;
+}
+
+#popover-asset .ant-card {
+    border: none !important;
+}
+
+#popover-asset .ant-card-body {
+    padding: 16px 12px;
+}
+
+#popover-asset .ant-card-actions li {
+    margin: 4px 0;
+}
+
+#popover-asset .ant-card-meta-avatar {
+    padding-inline-end: 10px !important;
+}
+
+.special-items .ant-card-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

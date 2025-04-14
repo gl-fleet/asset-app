@@ -1,0 +1,39 @@
+{{- if and .Values.ingress.enabled .Values.websockets.enabled }}
+{{- $fullName := include "ot-app-ppe-allocation.fullname" . -}}
+{{- $svcPort  := .Values.service.port -}}
+{{- $labels   := include "ot-app-ppe-allocation.labels" . | nindent 4 }}
+{{- range .Values.ingress.hosts }}
+---
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: {{ $fullName }}-{{ .host }}
+  labels:
+  {{ $labels }}
+  {{- with $.Values.ingress.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}  
+spec:
+  virtualhost:
+    fqdn: {{ .host | quote }}
+    {{- if $.Values.ingress.tls }}
+    tls:
+      {{- range $.Values.ingress.tls }}
+      secretName: {{ .secretName }}
+      {{- end }}
+    {{- end }}
+  routes:
+  - services:
+    - name: {{ $fullName }}
+      port: {{ $svcPort }}
+  - conditions:
+    - prefix: {{ $.Values.websockets.path }}
+    enableWebsockets: {{ $.Values.websockets.enabled }}
+    services:
+    - name: {{ $fullName }}
+      port: {{ $svcPort }}
+    timeoutPolicy:
+      response: infinity
+{{- end }}
+{{- end }}
