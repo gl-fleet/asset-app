@@ -19,7 +19,7 @@ const Center = styled.section`
         color: #fff;
     }
     .light {
-        color: #e37222;
+        color: #fff;
     }
 `
 
@@ -33,22 +33,22 @@ const Logo = styled.section`
     margin-bottom: 24px;
 
     img {
-        width: 100px;
+        width: 100%;
     }
 
     > span: nth-child(2) {
         position: absolute;
         font-weight: 800;
-        font-size: 22px;
-        bottom: 16px;
-        left: 83px;
+        font-size: 18;
+        bottom: 20px;
+        left: 72px;
     }
 
     > span: nth-child(3) {
         position: absolute;
-        font-size: 14px;
+        font-size: 11px;
         font-weight: 800;
-        bottom: 4px;
+        bottom: 9px;
         left: 72px;
     }
 

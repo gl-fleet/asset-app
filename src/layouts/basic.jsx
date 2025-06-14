@@ -142,7 +142,7 @@ export default ({ reload, isDarkMode, setSoftPass, children }) => {
     const userItems = [
         {
             key: "s_0",
-            icon: <Avatar size='small' style={{ color: '#fff', backgroundColor: '#f56a00', verticalAlign: 'middle', marginTop: -4 }}>{user[0]}</Avatar>,
+            icon: <Avatar size='small' style={{ color: '#fff', backgroundColor: '#f56a00', verticalAlign: 'middle', marginTop: -4, textTransform: 'uppercase' }}>{user[0]}</Avatar>,
             label: user,
             children: [
                 {
